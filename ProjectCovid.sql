@@ -15,7 +15,7 @@ order by 1,2
 Select Location, date, total_cases, total_deaths,(total_deaths/total_cases) * 100 as DeathPercentage
 from CovidDeaths
 where location like '%Indonesia%'
-where continent <> ''
+and continent <> ''
 order by 1,2
 
 -- Total cases vs Population
@@ -23,7 +23,7 @@ order by 1,2
 Select Location, date, total_cases, population,(total_deaths/population) * 100 as DeathPercentage
 from CovidDeaths
 where location like '%Indonesia%'
-where continent <> ''
+and continent <> ''
 order by 1,2
 
 -- Highest Infection Country
